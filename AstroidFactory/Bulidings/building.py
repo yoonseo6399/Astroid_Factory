@@ -8,7 +8,7 @@ class building:
     length = 0
 
 
-class 
+
 
 class productionBuilding(building):
     craftperiod = 0
