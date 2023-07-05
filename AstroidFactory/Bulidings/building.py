@@ -8,12 +8,12 @@ class Building:
     length = 0
 
 
-class ProductionBuilding(building):
+class ProductionBuilding(Building):
     craftPeriod = 0
     output = 0
 
 
-class CraftingBuilding(building):
+class CraftingBuilding(Building):
     craftPeriod = 0
     input = 0
     output = 0
