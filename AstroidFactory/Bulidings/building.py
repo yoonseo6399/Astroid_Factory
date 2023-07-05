@@ -1,4 +1,4 @@
-class building:
+class Building:
     size = 0
     price = 0
     
