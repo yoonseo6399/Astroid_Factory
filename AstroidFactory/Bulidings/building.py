@@ -21,7 +21,7 @@ class CraftingBuilding(Building):   #2차 생산 건물
 #----------------------------------------------------------------
 #builing
 
-#1차
+#1차 ddd
 
 
 class Mine(ProductionBuilding):
