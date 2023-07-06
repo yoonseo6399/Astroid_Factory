@@ -1,96 +1,96 @@
 #----------------------------------------------------------------
 #frame
 
-class item: #frame
+class Item: #frame
     state = ""
     recipe = [[]]
     name = "item"
     description = "ester egg"
-class solid(item):
+class Solid(Item):
     state = "solid"
 
-class liquid(item):
+class Liquid(Item):
     state = "liquid"
 
-class gas(item):
+class Gas(Item):
     state = "gas"
 
-class special(item):
+class Special(Item):
     state = "special"
 
 #----------------------------------------------------------------
 #items
 
 #special-----
-class energy(special):
+class Energy(Special):
     name = "생각중"
 
 #solid-----
-class coal(solid):
+class Coal(Solid):
     name = "석탄"
     description = "석탄이다."
-class iron(solid):
+class Iron(Solid):
     name = "철"
 
-class aluminium(solid):
+class Aluminium(Solid):
     name = "알루미늄"
 
-class titanium(solid):
+class Titanium(Solid):
     name = "티타늄"
 
-class tungsten(solid):
+class Tungsten(Solid):
     name = "텅스텐"
 
-class manganese(solid):
+class Manganese(Solid):
     name = "망가니즈"
 
-class uranium(solid):
+class Uranium(Solid):
     name = "우라늄"
 
-class copper(solid):
+class Copper(Solid):
     name = "구리"
 
-class steel(solid):
+class Steel(Solid):
     name = "강철"
-    recipe = [iron[1],manganese[1],energy[1]]
+    recipe = [Iron[1], Manganese[1], Energy[1]]
 
-class osmium(solid):
+class Osmium(Solid):
     name = "오스뮴"
 
 #liquid-----
-class water(liquid):
+class Water(Liquid):
     name = "물"
 
-class crudeOil(liquid):
+class Crudeoil(Liquid):
     name = "원유"
 
-class collingWater(liquid):
+class Collingwater(Liquid):
     name = "냉각수"
-    recipe = [water[1],energy[1]]
+    recipe = [Water(), Energy[1]]
 
-class slag(liquid):
+class Slag(Liquid):
     name = "광재"
 
 
 # gas-----
-class hydrogen(gas):
+class Hydrogen(Gas):
     name = "수소"
 
-class oxygen(gas):
+class Oxygen(Gas):
     name = "산소"
 
-class argon(gas):
+class Argon(Gas):
     name = "아르곤"
 
-class methane(gas):
+class Methane(Gas):
     name = "메테인"
-    recipe = [coal[1],energy[1]]
+    recipe = [Coal[1],Energy[1]]
 
 # 액화된 기체
-class liquidHydrogen(liquid):
+class Liquidhydrogen(Liquid):
     name = "액화 수소"
-    recipe = [hydrogen[1],collingWater[1],energy[1]]
+    recipe = [Hydrogen[1], Collingwater[1], Energy[1]]
 
-class liquidOxygen(liquid):
+class LiquidOxygen(Liquid):
     name = "액화 산소"
-    recipe = [oxygen[1],collingWater[1],energy[1]]
+    recipe = [Oxygen[1], Collingwater[1], Energy[1]]

@@ -1,7 +1,7 @@
 #----------------------------------------------------------------
 #Frame
 
-class building: #건물
+class Building: #건물
     price = 0
     Xpos = 0
     Ypos = 0
@@ -9,11 +9,11 @@ class building: #건물
     length = 0
 
 
-class productionBuilding(building): #기본 생산 건물
-    craftperiod = 0 #제작 주기
+class ProductionBuilding(Building): #기본 생산 건물
+    craftPeriod = 0 #제작 주기
     output = [[]]
 
-class craftingBuilding(building):   #2차 생산 건물
+class CraftingBuilding(Building):   #2차 생산 건물
     craftperiod = 0
     input = [[]]
     output = [[]]
@@ -23,8 +23,9 @@ class craftingBuilding(building):   #2차 생산 건물
 
 #1차
 
-class mine(productionBuilding):
-    craftperiod = 5
+
+class Mine(ProductionBuilding):
+    craftPeriod = 5
     price = 100
     width = 2
     height = 2
@@ -33,8 +34,9 @@ class mine(productionBuilding):
         #이 건물의 xpos, ypos에 겹치는 광석 있는지 확인
         output = ["ore"[1]]
 
-class pump(productionBuilding):
-    craftperiod = 5
+
+class Pump(ProductionBuilding):
+    craftPeriod = 5
     price = 100
     width = 2
     height = 2
@@ -42,8 +44,9 @@ class pump(productionBuilding):
 
 #2차
 
-class refinery(craftingBuilding):
-    craftperiod = 10
+
+class Refinery(CraftingBuilding):
+    craftPeriod = 10
     price = 1000
     width = 4
     height = 4
