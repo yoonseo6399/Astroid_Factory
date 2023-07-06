@@ -10,11 +10,11 @@ class building: #건물
 
 
 class productionBuilding(building): #기본 생산 건물
-    craftPeriod = 0 #제작 주기
+    craftperiod = 0 #제작 주기
     output = [[]]
 
 class craftingBuilding(building):   #2차 생산 건물
-    craftPeriod = 0
+    craftperiod = 0
     input = [[]]
     output = [[]]
 
@@ -24,7 +24,7 @@ class craftingBuilding(building):   #2차 생산 건물
 #1차
 
 class mine(productionBuilding):
-    craftPeriod = 5
+    craftperiod = 5
     price = 100
     width = 2
     height = 2
