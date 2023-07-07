@@ -1,3 +1,5 @@
+import items
+
 #----------------------------------------------------------------
 #Frame
 
@@ -32,7 +34,7 @@ class Mine(ProductionBuilding):
 
     def onwhich (ore):
         #이 건물의 xpos, ypos에 겹치는 광석 있는지 확인
-        output = ["ore"[1]]
+        output = [[items.Solid,1]]
 
 
 class Pump(ProductionBuilding):
@@ -40,7 +42,7 @@ class Pump(ProductionBuilding):
     price = 100
     width = 2
     height = 2
-    output = ["water"[1]]
+    output = [[items.Water, 1]]
 
 #2차
 
@@ -50,4 +52,21 @@ class Refinery(CraftingBuilding):
     price = 1000
     width = 4
     height = 4
-    input = ["water"[1], "ore"[2], "energy"[1]]
+
+class Oilrefinery(CraftingBuilding):
+    craftPeriod = 10
+    price = 1000
+    width = 4
+    height = 4
+
+class PlasticFactory(CraftingBuilding):
+    craftPeriod = 15
+    price = 10000
+    width = 4
+    height = 4
+
+class CoolingWaterFactory(CraftingBuilding):
+    craftPeriod = 10
+    price = 10000
+    width = 4
+    height = 4

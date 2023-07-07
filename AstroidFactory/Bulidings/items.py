@@ -6,6 +6,7 @@ class Item: #frame
     recipe = [[]]
     name = "item"
     description = "ester egg"
+    price = "non-tradable"
 class Solid(Item):
     state = "solid"
 
@@ -52,7 +53,7 @@ class Copper(Solid):
 
 class Steel(Solid):
     name = "강철"
-    recipe = [Iron[1], Manganese[1], Energy[1]]
+    recipe = [[Iron,1], [Manganese,1], [Energy,1]]
 
 class Osmium(Solid):
     name = "오스뮴"
@@ -66,7 +67,7 @@ class Crudeoil(Liquid):
 
 class Collingwater(Liquid):
     name = "냉각수"
-    recipe = [Water(), Energy[1]]
+    recipe = [[Water,1], [Energy,1]]
 
 class Slag(Liquid):
     name = "광재"
@@ -84,13 +85,13 @@ class Argon(Gas):
 
 class Methane(Gas):
     name = "메테인"
-    recipe = [Coal[1],Energy[1]]
+    recipe = [[Coal,1],[Energy,1]]
 
 # 액화된 기체
 class Liquidhydrogen(Liquid):
     name = "액화 수소"
-    recipe = [Hydrogen[1], Collingwater[1], Energy[1]]
+    recipe = [[Hydrogen,1], [Collingwater,1], [Energy,1]]
 
 class LiquidOxygen(Liquid):
     name = "액화 산소"
-    recipe = [Oxygen[1], Collingwater[1], Energy[1]]
+    recipe = [[Oxygen,1], [Collingwater,1], [Energy,1]]
