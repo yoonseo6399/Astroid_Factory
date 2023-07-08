@@ -25,6 +25,11 @@ class Special(Item):
 #special-----
 class Energy(Special):
     name = "생각중"
+    description = "거의 모든 기계들이 동작하게 하는 에너지다."
+
+class Blank(Special):
+    name = "공백"
+    description = "아무것도 없는 땅이다."
 
 #solid-----
 class Coal(Solid):
@@ -32,10 +37,10 @@ class Coal(Solid):
     description = "석탄이다."
 class Iron(Solid):
     name = "철"
-
+    description = "철이다."
 class Aluminium(Solid):
     name = "알루미늄"
-
+    description = "알루미늄이다."
 class Titanium(Solid):
     name = "티타늄"
 
@@ -51,10 +56,6 @@ class Uranium(Solid):
 class Copper(Solid):
     name = "구리"
 
-class Steel(Solid):
-    name = "강철"
-    recipe = [[Iron,1], [Manganese,1], [Energy,1]]
-
 class Osmium(Solid):
     name = "오스뮴"
 
@@ -62,16 +63,11 @@ class Osmium(Solid):
 class Water(Liquid):
     name = "물"
 
-class Crudeoil(Liquid):
+class CrudeOil(Liquid):
     name = "원유"
-
-class Collingwater(Liquid):
-    name = "냉각수"
-    recipe = [[Water,1], [Energy,1]]
 
 class Slag(Liquid):
     name = "광재"
-
 
 # gas-----
 class Hydrogen(Gas):
@@ -83,15 +79,34 @@ class Oxygen(Gas):
 class Argon(Gas):
     name = "아르곤"
 
-class Methane(Gas):
-    name = "메테인"
-    recipe = [[Coal,1],[Energy,1]]
+#제작품----------------
 
-# 액화된 기체
+#solid-----
+
+class Steel(Solid):
+    name = "강철"
+    recipe = [[Iron,1], [Manganese,1], [Energy,1]]
+
+#liquid-----
+
+class CollingWater(Liquid):
+    name = "냉각수"
+    recipe = [[Water, 1], [Energy, 1]]
+
+
 class Liquidhydrogen(Liquid):
     name = "액화 수소"
-    recipe = [[Hydrogen,1], [Collingwater,1], [Energy,1]]
+    recipe = [[Hydrogen,1], [CollingWater,1], [Energy,1]]
 
 class LiquidOxygen(Liquid):
     name = "액화 산소"
-    recipe = [[Oxygen,1], [Collingwater,1], [Energy,1]]
+    recipe = [[Oxygen,1], [CollingWater,1], [Energy,1]]
+
+class Oil(Liquid):
+    name = "석유"
+    recipe = [[Water,1],[CrudeOil,2],[Energy,1]]
+#gas-----
+
+class Methane(Gas):
+    name = "메테인"
+    recipe = [[Coal,1],[Energy,1]]
