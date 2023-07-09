@@ -1,4 +1,5 @@
-import items
+from AstroidFactory import items
+
 
 #----------------------------------------------------------------
 #Frame
@@ -34,7 +35,7 @@ class Mine(ProductionBuilding):
 
     def onwhich (ore):
         #이 건물의 xpos, ypos에 겹치는 광석 있는지 확인
-        output = [[items.Solid,1]]
+        output = [[items.Solid, 1]]
 
 
 class Pump(ProductionBuilding):
